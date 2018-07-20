@@ -1,0 +1,296 @@
+<html>
+    <head>
+          <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+          <script src="index.js"></script>
+    </head>
+    
+    <body>
+
+        <a-scene>
+            <!--<a-text value="Created by: Kaylen, Jenny, and Alyssa"  position= "2199 20 24" color: "red"></a-text>-->
+            <!--<a-box color:black position="2199 20 24"></a-box>-->
+        
+
+
+<!--POV (CAMERA) POSITION IN CAR-->
+            <a-entity light="type: ambient"></a-entity>
+            <a-entity id="cam" camera look-controls wasd-controls position="2199.967 20.55 25.871">
+                <a-cursor color="blue"></a-cursor>
+            </a-entity>
+            <a-sky src="assets/stars2.png"></a-sky>
+            
+            <!--TESLA CODE-->
+     <a-assets>
+        <a-asset-item id="tesla" src="assets/Tesla.glb"></a-asset-item>
+     </a-assets>
+
+  <a-entity gltf-model="#tesla" scale="3 3 3" rotation="-20 0 30" position="2200.015 20.020 24.896"></a-entity>
+  <!--LIGHT FOR TESLA CODE-->
+  <a-entity light="type: point; intensity: 500 ; distance: 50; decay: 2"
+          position="2199.946 22.246 24.8"></a-entity>
+          
+          
+            <!--music works in this box-->
+            <!--<a-box id="tesla" sound="src: url(assets/SpaceOddity.mp3); autoplay: true"></a-box>-->
+            
+          <!--ASTRONAUT IN TESLA-->
+          <a-assets>
+          <a-asset-item id="nasa-obj" src="assets/nasa.obj"></a-asset-item>
+          <a-asset-item id="nasasuit-mtl" src="assets/nasasuit.mtl"></a-asset-item>
+    </a-assets>
+    <a-entity
+         obj-model="obj: #nasa-obj; mtl: #nasasuit-mtl"
+         scale=".25 .25 .25"
+         rotation="-5 180 0"
+         position="2200.125 20.127 25.826"></a-entity>
+         
+         
+          <!--MERCURY-->
+           <a-entity>
+               <a-entity>
+                   <a-sphere id="mercury" src="assets/mercury.png" radius ="15" position="1000 20 0">
+                <a-animation
+                  attribute="rotation"
+                  dur="20000"
+                  fill="none"
+                  from="0 0 0"
+                  to="0 360 0"
+                  easing="linear"
+                  repeat="indefinite">
+                </a-animation>
+            </a-sphere>
+               </a-entity>
+                   <a-animation attribute="rotation"
+                   dur="10000"
+                   fill="forwards"
+                   to="0 360 0"
+                   repeat="indefinite"
+                   easing="linear"></a-animation>
+           </a-entity>
+           
+           <!--VENUS-->
+           <a-entity>
+               <a-entity>
+                   <a-sphere id="venus" src="assets/venus.jpg" radius ="40" position="1500 20 0">
+                <a-animation
+                  attribute="rotation"
+                  dur="20000"
+                  fill="none"
+                  from="0 0 0"
+                  to="0 360 0"
+                  easing="linear"
+                  repeat="indefinite">
+                </a-animation>
+            </a-sphere>
+               </a-entity>
+                   <a-animation attribute="rotation"
+                   dur="15000"
+                   fill="forwards"
+                   to="0 360 0"
+                   repeat="indefinite"
+                   easing="linear"></a-animation>
+           </a-entity>
+          
+          <!--EARTH-->
+           <a-entity>
+               <a-entity>
+                   <a-sphere id="earth" src="assets/earth.jpg" radius ="45" position="1850 20 0">
+                <a-animation
+                  attribute="rotation"
+                  dur="20000"
+                  fill="none"
+                  from="0 0 0"
+                  to="0 360 0"
+                  easing="linear"
+                  repeat="indefinite">
+                </a-animation>
+            </a-sphere>
+               </a-entity>
+                   <a-animation attribute="rotation"
+                   dur="100000"
+                   fill="forwards"
+                   to="0 360 0"
+                   repeat="indefinite"
+                   easing="linear"></a-animation>
+           </a-entity>
+           
+            <!--MARS-->
+            <a-entity>
+                <a-entity>
+                    <a-sphere id="mars" src="assets/mars.jpg" position="2300 20 0" radius="30">
+                        <a-animation
+                          attribute="rotation"
+                          dur="20000"
+                          fill="none"
+                          from="0 0 0"
+                          to="0 360 0"
+                          easing="linear"
+                          repeat="indefinite">
+                        </a-animation>
+                    </a-sphere>
+                </a-entity>
+                <a-animation attribute="rotation"
+               dur="99000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"
+               easing="linear"></a-animation>
+            </a-entity>
+            
+            <!--JUPITER-->
+            <a-entity>
+                <a-entity>
+                    <a-sphere id="jupiter" src="assets/jupter.jpg" position="3100 20 0" radius="200">
+                        <a-animation
+                          attribute="rotation"
+                          dur="20000"
+                          fill="none"
+                          from="0 0 0"
+                          to="0 360 0"
+                          easing="linear"
+                          repeat="indefinite">
+                        </a-animation>
+                    </a-sphere>
+                </a-entity>
+                <a-animation attribute="rotation"
+               dur="130000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"
+               easing="linear"></a-animation>
+            </a-entity>
+            
+            <!--SATURN-->
+            <a-entity>
+                <a-entity>
+                    <a-sphere id="saturn" src="assets/saturn.jpg" position="3773.336 20 -1276.900" radius="170">
+                        <a-animation
+                          attribute="rotation"
+                          dur="20000"
+                          fill="none"
+                          from="0 0 0"
+                          to="0 360 0"
+                          easing="linear"
+                          repeat="indefinite">
+                        </a-animation>
+                    </a-sphere>
+                </a-entity>
+                <a-animation attribute="rotation"
+               dur="160000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"
+               easing="linear"></a-animation>
+            </a-entity>
+            
+            <!--URANUS-->
+            <a-entity>
+                <a-entity>
+                    <a-sphere id="uranus" src="assets/uranus.jpg" position="3561.679 20 784.968" radius="110">
+                        <a-animation
+                          attribute="rotation"
+                          dur="20000"
+                          fill="none"
+                          from="0 0 0"
+                          to="0 360 0"
+                          easing="linear"
+                          repeat="indefinite">
+                        </a-animation>
+                    </a-sphere>
+                </a-entity>
+                <a-animation attribute="rotation"
+               dur="170000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"
+               easing="linear"></a-animation>
+            </a-entity>
+            
+            <!--NEPTUNE-->
+            <a-entity>
+                <a-entity>
+                    <a-sphere id="neptune" src="assets/neptune.jpg" position="4500 20 0" radius="100">
+                        <a-animation
+                          attribute="rotation"
+                          dur="200000"
+                          fill="none"
+                          from="0 0 0"
+                          to="0 360 0"
+                          easing="linear"
+                          repeat="indefinite">
+                        </a-animation>
+                    </a-sphere>
+                </a-entity>
+                <a-animation attribute="rotation"
+               dur="200000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"
+               easing="linear"></a-animation>
+            </a-entity>
+            
+          <!--THE SUN-->
+            <a-sphere id="sun" src="assets/sun.jpg" position="0 20 0" radius="350">
+                <a-animation
+                  attribute="rotation"
+                  dur="150000"
+                  fill="none"
+                  from="0 0 0"
+                  to="0 360 0"
+                  easing="linear"
+                  repeat="indefinite">
+                </a-animation>
+            </a-sphere>
+        
+   
+   
+         <a-entity id="screen"
+            geometry="primitive: circle; radius: .07;"
+            position="2199.803 20.574 24.849"
+            sound="src: url(assets/SpaceOddity.mp3); autoplay:true; volume:30"
+            material="src: assets/playpause3.png"
+            onclick="changeVolume()"></a-entity>
+            
+        <a-entity id="eject"
+            geometry="primitive: circle; radius: .1;"
+            position="2199.505 20.574 24.849"
+            material="src: assets/eject2.png"
+            onclick="eject()"></a-entity>
+         
+         <!--<a-sphere id="moon" src="assets/moon.jpg" -->
+         <!--       position ="435 5 0" -->
+         <!--       scale="0.5 0.5 0.5"-->
+         <!--       radius="1">-->
+         <!--       <a-animation-->
+         <!--         attribute="rotation"-->
+         <!--         dur="10000"-->
+         <!--         fill="none"-->
+         <!--         from="0 0 0"-->
+         <!--         to="0 360 0"-->
+         <!--         easing="linear"-->
+         <!--         repeat="indefinite">-->
+         <!--       </a-animation>-->
+               <!-- <a-animation-->
+               <!-- attribute="position"-->
+               <!-- dur="1000"-->
+               <!-- from="0 0 2.5"-->
+               <!-- to="1.4 0.7 2.5"-->
+               <!-- direction="alternate-reverse"-->
+               <!-- easing="linear"-->
+               <!-- repeat="indefinite">-->
+               <!-- </a-animation>-->
+                
+               <!--<a-animation-->
+               <!-- attribute="position"-->
+               <!-- dur="1000"-->
+               <!-- from="1.4 0.7 2.5"-->
+               <!-- to="1.7 0.7 2.5"-->
+               <!-- direction="alternate-reverse"-->
+               <!-- easing="linear"-->
+               <!-- repeat="indefinite">-->
+               <!-- </a-animation>-->
+<!---->
+            <!--</a-sphere>-->
+    </a-scene>
+   </body>
+</html>
